@@ -21,7 +21,6 @@ public class StartApp implements CommandLineRunner {
         data1.setOnFire(false);
         data1.setIrLevel(1.0);
         data1.setTemperature(25.0);
-        data1.setActive(true);
         data1.setInsertionDateTime(LocalDateTime.now());
         repository.save(data1);
 
@@ -29,7 +28,6 @@ public class StartApp implements CommandLineRunner {
         data2.setOnFire(true);
         data2.setIrLevel(2.5);
         data2.setTemperature(30.0);
-        data2.setActive(false);
         data2.setInsertionDateTime(LocalDateTime.of(2023, 4, 9, 15, 30));
         repository.save(data2);
 
@@ -37,7 +35,6 @@ public class StartApp implements CommandLineRunner {
         data3.setOnFire(false);
         data3.setIrLevel(3.0);
         data3.setTemperature(20.0);
-        data3.setActive(true);
         data3.setInsertionDateTime(LocalDateTime.of(2023, 4, 8, 10, 15));
         repository.save(data3);
 

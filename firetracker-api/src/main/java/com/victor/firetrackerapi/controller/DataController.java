@@ -4,13 +4,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import com.victor.firetrackerapi.model.Data;
 import com.victor.firetrackerapi.repository.DataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -47,6 +44,20 @@ public class DataController {
             @RequestParam("endDateTime") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endDateTime) {
 
         repository.deleteDataBetween(startDateTime, endDateTime);
+    }
+
+    @PostMapping("firetracker/data/new")
+    public void saveData(
+            @RequestParam("isOnFire") Boolean isOnFire,
+            @RequestParam("irLevel") Double irLevel,
+            @RequestParam("temperature") Double temperature
+    ){
+        Data data = new Data();
+        data.setInsertionDateTime(LocalDateTime.now());
+        data.setOnFire(isOnFire);
+        data.setIrLevel(irLevel);
+        data.setTemperature(temperature);
+        repository.save(data);
     }
 
 }

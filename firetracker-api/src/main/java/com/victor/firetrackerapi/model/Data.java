@@ -28,9 +28,6 @@ public class Data {
     @Column(name = "temperature")
     private Double temperature;
 
-    @Column(name = "isActive")
-    private Boolean isActive;
-
     public Integer getId() {
         return id;
     }
@@ -71,14 +68,6 @@ public class Data {
         this.temperature = temperature;
     }
 
-    public Boolean getActive() {
-        return isActive;
-    }
-
-    public void setActive(Boolean active) {
-        isActive = active;
-    }
-
     @Override
     public String toString() {
         return "Data{" +
@@ -87,7 +76,6 @@ public class Data {
                 ", isOnFire=" + isOnFire +
                 ", irLevel=" + irLevel +
                 ", temperature=" + temperature +
-                ", isActive=" + isActive +
                 '}';
     }
 }

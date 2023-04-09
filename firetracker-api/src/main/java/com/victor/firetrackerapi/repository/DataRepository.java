@@ -14,10 +14,6 @@ import java.util.List;
 @Repository
 public interface DataRepository extends JpaRepository<Data, Integer>  {
 
-    //List<Data> findAll();
-
-    //void deleteAll();
-
     @Query("SELECT d FROM Data d WHERE d.insertionDateTime > :startDateTime and d.insertionDateTime < :endDateTime")
     List<Data> findDataBetween(@Param("startDateTime") LocalDateTime startDateTime, @Param("endDateTime")  LocalDateTime endDateTime);
 
@@ -28,7 +24,4 @@ public interface DataRepository extends JpaRepository<Data, Integer>  {
     @Transactional
     @Query("DELETE FROM Data d WHERE d.insertionDateTime > :startDateTime AND d.insertionDateTime < :endDateTime")
     void deleteDataBetween(@Param("startDateTime") LocalDateTime startDateTime, @Param("endDateTime") LocalDateTime endDateTime);
-
-
-
 }
