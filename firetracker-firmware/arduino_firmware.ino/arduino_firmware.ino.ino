@@ -1,14 +1,12 @@
-#include <SPI.h>
 #include <Ethernet.h>
 
 //Ethernet Configuration
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 EthernetClient client;
-int HTTP_PORT = 8081;
+int HTTP_PORT = 49152;
 char HOST_NAME[] = "192.168.12.13";
 String PATH_NAME;
 IPAddress ip(192, 168, 12, 27);
-IPAddress myDns(192, 168, 12, 1);
 
 //Pin Configuration
 //int led = 13; // define the LED pin

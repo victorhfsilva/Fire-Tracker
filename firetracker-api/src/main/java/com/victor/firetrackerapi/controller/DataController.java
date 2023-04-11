@@ -33,6 +33,11 @@ public class DataController {
         return repository.findDataBetween(startDateTime, endDateTime);
     }
 
+    @GetMapping("/firetracker/data/getLast")
+    public Data getLastInsertedData(){
+        return repository.getLastInsertedData();
+    }
+
     @DeleteMapping("/firetracker/data/clean")
     public void clean(){
         repository.deleteAll();
