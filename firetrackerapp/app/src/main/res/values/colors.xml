@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="onyx">#3F4045</color>
+    <color name="light_raisin_black">#363036</color>
+    <color name="ylnmn_blue">#355691</color>
+    <color name="ultra_violet">#5f5aa2</color>
+    <color name="english_violet">#413f54</color>
+    <color name="raisin_black">#30292f</color>
+    <color name="red">#FF0000</color>
+</resources>

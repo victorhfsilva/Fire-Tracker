@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">firetracker-app</string>
+    <string name="app_title">FireTracker</string>
+    <string name="config">Configurações</string>
+    <string name="about">Sobre</string>
+    <string name="isOnFire">ALERTA: DETECTAMOS INDÍCIOS DE INCÊNDIO.</string>
+    <string name="notifications_title">Notificações</string>
+    <string name="notifications_description">Receba notificações no caso de incêndio.</string>
+    <string name="server_title">Servidor:</string>
+    <string name="server_description">Configure o endereço do servidor de dados.</string>
+    <string name="alert_contact_title">Alertar contato</string>
+    <string name="contact_title">Contato:</string>
+    <string name="alert_contact_description">Configure o número do contato que será alertado em caso de incêndio.</string>
+    <string name="version">Versão: 1.0.0</string>
+    <string name="last_update">Última Atualização: 06/08/2023</string>
+    <string name="developer">Desenvolvedor: Victor Hugo Ferreira Silva</string>
+</resources>

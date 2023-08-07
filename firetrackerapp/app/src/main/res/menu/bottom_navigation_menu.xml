@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_bar_firetracker_menu"
+        android:title="@string/app_title"
+        android:icon="@drawable/fire_tracker_logo"/>
+
+    <item
+        android:id="@+id/bottom_bar_config_menu"
+        android:title="@string/config"
+        android:icon="@drawable/baseline_settings_24" />
+
+    <item
+        android:id="@+id/bottom_bar_about_menu"
+        android:title="@string/about"
+        android:icon="@drawable/baseline_info_24" />
+
+</menu>

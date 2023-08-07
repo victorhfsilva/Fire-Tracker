@@ -1,38 +1,32 @@
 # Fire Tracker
 
-Fire Tracker is a project that aims to create an API that stores values obtained from a fire sensor and a temperature sensor in a database. These data can be very useful in fire detection projects. In addition, a console was created to interact with the API, triggering a siren in case of fire.
+Fire Tracker is a project that aims to create an API that stores values obtained from a fire sensor and a temperature sensor in a database. These data can be very useful in fire detection projects. In addition, a console and a app were created to interact with the API, triggering a siren and sending notifications in case of fire.
+
+## App
+
+Firetracker App is an Android application that provides real-time monitoring of a server to detect indications of fire. The app is designed to read data from the server's API, which stores values obtained from fire and temperature sensors. If a fire indication is detected, the app launches notifications and sends SMS alerts to the specified contact.
 
 ## API
 
-To build the API, the Spring Boot, Spring Data JPA, and Spring Web frameworks were used. The programming language used was Java.
-
-The API has controllers to request, post, and delete data. Both requests and removals can also be made by inserting a time period.
-
-## Data
-
-The PostgreSQL database was used to store the values. It stores the date/time of data insertion, the level of infrared emission, the temperature, and a boolean indicating whether a flame was detected or not.
+The Firetracker API is built using Spring Boot, Spring Data JPA, and Spring Web frameworks. The API stores data from fire and temperature sensors in a PostgreSQL database. It offers endpoints to request, post, and delete data.
 
 ## Hardware
 
-The hardware used was a computer as a server and an Arduino as a client. The Ethernet HR911105A shield was used to connect the Arduino to the network. The KY-026 and KY-013 sensors were used to detect the infrared emission level and temperature, respectively.
+The hardware setup consists of a computer acting as the server and an Arduino device acting as the client. The Arduino is connected to the network using an Ethernet HR911105A shield. The KY-026 sensor is used to detect the level of infrared emission, while the KY-013 sensor measures the temperature.
 
-## Console
+## Functionality
 
-In addition to the API, a Python console was developed to interact with the API and control a siren in case of fire.
+The Firetracker App provides the following functionality:
 
-The console uses the Requests library to make requests to the API and the multiprocessing library to execute the siren in a separate process from the main process.
+1. Real-time Monitoring: The app continuously fetches data from the server's API to detect any indications of fire.
+2. Notification: When the app identifies a potential fire situation, it launches a notification on the user's device to alert them about the event.
+3. SMS Alert: If configured, the app can send SMS alerts to a predefined contact, informing them about the potential fire situation.
+4. User Interaction: The app allows users to interact with the API through various controls and settings, such as setting alert preferences, server address and contact number.
 
-## Execution
+## Future Enhancements
 
-To run the project, you need to have Java JDK 17 and PostgreSQL installed.
+The Firetracker App can be further improved by implementing the following features:
 
-After cloning the repository, you need to configure the database access credentials and the server's IP and port information.
-
-## Future Improvements
-
-Some improvements that can be made to the project include:
-
-* Implementation of authentication and authorization in the API
-* Addition of an alert system via email or SMS
-* Use of a more robust microcontroller to handle more data and more sensors
-* Development of a mobile application to monitor data and control the siren from a smartphone.
+1. User Authentication: Implement user authentication and authorization to ensure secure access to the app and prevent unauthorized access to sensitive data.
+2. Remote Control: Allow users to remotely control the siren and other connected devices from the app.
+3. Data Analytics: Add data analytics features to analyze historical data and provide insights into potential fire patterns.

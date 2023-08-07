@@ -1,38 +1,32 @@
 # Fire Tracker
 
-Fire Tracker é um projeto que tem como objetivo criar uma API que armazena valores obtidos de um sensor de incêndio e um sensor de temperatura em um banco de dados. Esses dados podem ser muito úteis em projetos de detecção de incêndios. Além disso, um console foi criado para interagir com a API, acionando uma sirene em caso de incêndio.
+O Fire Tracker é um projeto que tem como objetivo criar uma API que armazena valores obtidos de um sensor de incêndio e de um sensor de temperatura em um banco de dados. Esses dados podem ser muito úteis em projetos de detecção de incêndios. Além disso, um console e um aplicativo foram criados para interagir com a API, acionando uma sirene e enviando notificações em caso de incêndio.
+
+## Aplicativo
+
+O Firetracker App é um aplicativo para Android que oferece monitoramento em tempo real de um servidor para detectar indícios de incêndio. O aplicativo é projetado para ler dados da API do servidor, que armazena valores obtidos de sensores de incêndio e temperatura. Se houver indicação de incêndio, o aplicativo exibe notificações e envia alertas SMS para o contato especificado.
 
 ## API
 
-Para construir a API, foram utilizados os frameworks Spring Boot, Spring Data JPA e Spring Web. A linguagem de programação utilizada foi Java.
-
-A API possui controladores para solicitar, enviar e excluir dados. Tanto as solicitações quanto as remoções também podem ser feitas inserindo um período de tempo.
-
-## Dados
-
-O banco de dados PostgreSQL foi utilizado para armazenar os valores. Ele armazena a data/horário de inserção dos dados, o nível de emissão infravermelha, a temperatura e um booleano indicando se uma chama foi detectada ou não.
+A API do Firetracker é construída com base nos frameworks Spring Boot, Spring Data JPA e Spring Web. A API armazena os dados dos sensores de incêndio e temperatura em um banco de dados PostgreSQL. Ela oferece URIs para solicitar, postar e excluir dados.
 
 ## Hardware
 
-O hardware utilizado foi um computador como servidor e um Arduino como cliente. O shield Ethernet HR911105A foi utilizado para conectar o Arduino à rede. Os sensores KY-026 e KY-013 foram utilizados para detectar o nível de emissão infravermelha e a temperatura, respectivamente.
+A configuração de hardware consiste em um computador atuando como servidor e um dispositivo Arduino atuando como cliente. O Arduino está conectado à rede usando um shield Ethernet HR911105A. O sensor KY-026 é usado para detectar o nível de emissão de infravermelho, enquanto o sensor KY-013 mede a temperatura.
 
-## Console
+## Funcionalidades
 
-Além da API, um console Python foi desenvolvido para interagir com a API e controlar uma sirene em caso de incêndio.
+O Firetracker App oferece as seguintes funcionalidades:
 
-O console utiliza a biblioteca Requests para fazer solicitações à API e a biblioteca multiprocessing para executar a sirene em um processo separado do processo principal.
-
-## Execução
-
-Para executar o projeto, é necessário ter instalado o Java JDK 17 e o PostgreSQL.
-
-Depois de clonar o repositório, é necessário configurar as credenciais de acesso ao banco de dados e as informações de IP e porta do servidor.
+1. Monitoramento em Tempo Real: O aplicativo busca continuamente dados da API do servidor para detectar quaisquer indícios de incêndio.
+2. Notificação: Quando o aplicativo identifica uma possível situação de incêndio, ele exibe uma notificação no dispositivo do usuário para alertá-lo sobre o evento.
+3. Alerta por SMS: Se configurado, o aplicativo pode enviar alertas por SMS para um contato pré-definido, informando sobre a possível situação de incêndio.
+4. Interação do Usuário: O aplicativo permite que os usuários interajam com a API através de diversos controles e configurações, como definir preferências de alerta, endereço do servidor e número de contato.
 
 ## Melhorias Futuras
 
-Algumas melhorias que podem ser feitas no projeto incluem:
+O Firetracker App pode ser aprimorado ainda mais com a implementação das seguintes funcionalidades:
 
-* Implementação de autenticação e autorização na API
-* Adição de um sistema de alertas via email ou SMS
-* Utilização de um microcontrolador mais robusto para lidar com um maior volume de dados e com mais sensores
-* Desenvolvimento de um aplicativo mobile para monitorar os dados e controlar a sirene a partir de um smartphone.
+1. Autenticação de Usuário: Implementar autenticação e autorização do usuário para garantir acesso seguro ao aplicativo e evitar acesso não autorizado a dados sensíveis.
+2. Controle Remoto: Permitir que os usuários controlem remotamente a sirene e outros dispositivos conectados pelo aplicativo.
+3. Análise de Dados: Adicionar recursos de análise de dados para analisar dados históricos e fornecer informações sobre possíveis padrões de incêndio.

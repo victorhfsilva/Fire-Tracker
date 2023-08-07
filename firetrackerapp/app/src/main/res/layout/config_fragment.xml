@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.victor.firetracker_app.presentation.viewmodels.ConfigViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_raisin_black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Switch
+                        android:id="@+id/sw_notifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:checked="true"
+                        android:text="@string/notifications_title"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/notifications_description"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/notifications_description"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sw_notifications" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="407dp"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:layout_editor_absoluteX="1dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_server_title"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/server_title"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_server"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="24dp"
+                        android:maxLines="2"
+                        android:text="http://192.168.12.13:49152/firetracker/data/getLast"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/tv_server_title"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/bt_server_edit"
+                        android:layout_width="46dp"
+                        android:layout_height="41dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_raisin_black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_server_title"
+                        app:srcCompat="@drawable/baseline_edit_animation" />
+
+                    <TextView
+                        android:id="@+id/server_description"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/server_description"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_server" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="407dp"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Switch
+                        android:id="@+id/sw_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="20dp"
+                        android:checked="false"
+                        android:text="@string/alert_contact_title"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_contact_title"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="23dp"
+                        android:text="@string/contact_title"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sw_contact" />
+
+                    <TextView
+                        android:id="@+id/tv_contact"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/tv_contact_title"
+                        app:layout_constraintTop_toTopOf="@+id/tv_contact_title" />
+
+                    <ImageButton
+                        android:id="@+id/bt_contact_edit"
+                        android:layout_width="46dp"
+                        android:layout_height="41dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/light_raisin_black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sw_contact"
+                        app:srcCompat="@drawable/baseline_edit_animation" />
+
+                    <TextView
+                        android:id="@+id/contact_description"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/alert_contact_description"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_contact" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
